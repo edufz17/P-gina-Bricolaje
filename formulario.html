@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label 
+        {
+            font-family: Arial;
+            font-size: 18px;
+        }
+        h1 
+        {
+            font-size: 25px;
+            color: brown;
+            font-family: Arial;
+        }
+        body 
+        {
+            background-color: antiquewhite;
+        }
+        #cajatexto 
+        {
+            width: 150px;
+            height: 50px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulario de información</h1>
+    <form action="formulario.php"
+    method="post">
+    
+      
+        <fieldset>
+            <legend>Sus Datos</legend>
+        <label for="nombre">Nombre y apellidos:</label>
+        <input type="text" 
+        id="nombre" name="nombre" 
+        required 
+        maxlength="50"
+        autofocus>
+        
+        <p></p>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" 
+        id="contraseña" name="contraseña" 
+        maxlength="8"><br>
+        
+        <p></p>
+        <label for="usuario">Usuario</label>
+        <input type="text"
+        id="usuario" name="usuario"
+        value="Anónimo"
+        disabled>
+
+         <p></p>
+            <legend>Nivel:</legend>
+        <p>
+        <label for="prof">Profesional</label>
+        <input type="radio"><br><br>
+
+        <label for="avanz">Avanzado</label>
+        <input type="radio"
+        checked
+        name="habitacion"><br><br>
+
+        <label for="princ">Principiante</label>
+        <input type="radio"
+        name="habitacion"><br>
+        </p>
+        </fieldset>
+      <!--Desplegable-->
+      <p></p>  
+      <label for="nacionalidad">Nacionalidad:</label>
+        <select name="nacionalidad" 
+        id="nacionalidad">
+            <option value="1">España</option>
+        </select>
+
+        <p></p>
+        <label for="cajatexto">Descripción:</label>
+        <textarea name="cajatexto" id="cajatexto"></textarea><br><br>
+        
+        <p></p>
+        <p>
+        <label for="ofertas">Deseo recibir información 
+            sobre novedades y ofertas</label>
+        <input type="checkbox"
+        checked><br>
+        
+        <p></p>
+        <label for="datos">Declaro haber leído y 
+            aceptar las condiciones generales del programa
+        y la normativa sobre protección de datos</label>
+        <input type="checkbox"
+        name="condiciones"><br><br>
+        </p>
+        
+        <label for="adjunt">Adjuntar foto:</label>
+        <input type="file" id="foto" name="foto"><br><br>
+        
+        
+        <p>
+        <input type="submit"value="Enviar">
+        <input type="reset"value="Borrar datos">
+        </p>
+
+    </form>
+</body>
+</html>
